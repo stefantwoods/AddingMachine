@@ -6,33 +6,50 @@
 
 package cse360assignment02;
 
-public class AddingMachine {
+public class AddingMachine 
+{
 	  /**
 	   * variables
 	   */
 	  private int total;
+	  private String memory = "";
 	  
 	  /**
 	   * constructor
 	   */
-	  public AddingMachine () {
+	  public AddingMachine () 
+	  {
 	    total = 0;  // not needed - included for clarity
+	    memory = "0";
 	  }
 	  
-	  public int getTotal () {
-	    return 0;
+	  public int getTotal () 
+	  {
+	    return total;
 	  }
 	  
-	  public void add (int value) {
+	  public void add (int value) 
+	  {
+		  total = total + value;
+		  memory = memory + " + " + value;
 	  }
 
-	  public void subtract (int value) {
+	  public void subtract (int value) 
+	  {
+		  total = total - value;
+		  memory = memory + " - " + value;
 	  }
 
-	  public String toString () {
-	    return "";
+	  public String toString () 
+	  {
+	    return memory;
 	  }
 
-	  public void clear() {
+	  public void clear() 
+	  {
+		  memory = "";
 	  }
+	  
 	}
+
+
